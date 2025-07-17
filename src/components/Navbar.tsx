@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 type NavItem = {
   label: string;
   href: string;
@@ -55,10 +57,10 @@ export default function Navbar() {
         ))}
       </ul>
       <div className="flex gap-md">
-        <button className="text-sm text-b5">Login</button>
-        <button className="bg-b5 text-white px-8 py-2 rounded-full text-sm">
+        <Button variant="ghost">Login</Button>
+        <Button variant="primary" className="px-8">
           Register
-        </button>
+        </Button>
       </div>
     </nav>
   );

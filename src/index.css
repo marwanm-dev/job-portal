@@ -12,10 +12,14 @@
   --color-b8: #031e33;
   --color-b9.5: #01070d;
   --color-neutral-950: #0d0d0d;
+
+  --color-feat: #edf7ff;
+
   --gap-sm: 10px;
   --gap-md: 24px;
   --gap-xl: 36px;
 
-  --font-inter: "Inter", sans-serif;
   --spacing-md: 80px;
+
+  --font-inter: "Inter", sans-serif;
 }

@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 export default function HeroSection() {
   return (
     <section className="bg-white font-semibold">
@@ -15,12 +17,12 @@ export default function HeroSection() {
             All you need to do is pack your bags.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <button className="px-12 py-2.5 border border-b5 text-b5 rounded-full">
+            <Button variant="outline" className="px-12 py-2.5">
               Hire Workers
-            </button>
-            <button className="px-12 py-2.5 bg-b5 text-white rounded-full">
+            </Button>
+            <Button variant="primary" className="px-12 py-2.5">
               Apply Now
-            </button>
+            </Button>
           </div>
         </div>
       </div>
