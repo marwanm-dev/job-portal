@@ -18,9 +18,5 @@ export default function Button({
     variantClasses = "border border-b5 text-b5 hover:border-b5/80";
   }
 
-  const base = "text-sm rounded-full px-6 py-2 transition-colors";
-
-  return (
-    <button className={`${base} ${variantClasses} ${className}`} {...props} />
-  );
+  return <button className={`${variantClasses} ${className}`} {...props} />;
 }

@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../Button";
 
 type NavItem = {
   label: string;
@@ -15,8 +15,8 @@ const navItems: NavItem[] = [
 
 export default function Navbar() {
   return (
-    <nav className="flex font-inter font-semibold justify-between items-center px-md py-4 bg-white">
-      <div className="flex justify-between items-center gap-sm">
+    <nav className="flex-between px-20 py-4">
+      <div className="flex-between gap-2.5">
         <svg
           width="28"
           height="28"
@@ -45,20 +45,25 @@ export default function Navbar() {
             fill="#0D0D0D"
           />
         </svg>
-        <div className="text-neutral-950">Job Portal</div>
+        <div className="font-semibold text-neutral-950">Job Portal</div>
       </div>
-      <ul className="flex gap-md text-gray text-sm">
+      <ul className="flex gap-6 text-gray">
         {navItems.map((item) => (
           <li key={item.label}>
-            <a href={item.href} className="hover:text-b5 transition-colors">
+            <a
+              href={item.href}
+              className="font-semibold hover:text-b5 transition-colors"
+            >
               {item.label}
             </a>
           </li>
         ))}
       </ul>
-      <div className="flex gap-md">
-        <Button variant="ghost">Login</Button>
-        <Button variant="primary" className="px-8">
+      <div className="flex gap-9">
+        <Button variant="ghost" className="p-0 text-base">
+          Login
+        </Button>
+        <Button variant="primary" className="px-10 py-2 text-base">
           Register
         </Button>
       </div>

@@ -1,6 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-7xl leading-[90px];
+  }
+  h2 {
+    @apply text-[52px] leading-16;
+  }
+  h4 {
+    @apply text-xl leading-7;
+  }
+  button {
+    @apply font-semibold px-[60px] py-3 leading-6 text-xl rounded-full;
+  }
+}
+
+@layer components {
+  .p-lg {
+    @apply text-2xl leading-7;
+  }
+  .p-sm {
+    @apply text-lg leading-[30px];
+  }
+}
+
+@utility flex-between {
+  @apply flex justify-between items-center;
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
 @theme {
   --color-*: initial;
 
@@ -14,12 +54,6 @@
   --color-neutral-950: #0d0d0d;
 
   --color-feat: #edf7ff;
-
-  --gap-sm: 10px;
-  --gap-md: 24px;
-  --gap-xl: 36px;
-
-  --spacing-md: 80px;
 
   --font-inter: "Inter", sans-serif;
 }
