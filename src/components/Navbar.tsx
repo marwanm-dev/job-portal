@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./Button";
 
 type NavItem = {
@@ -14,59 +15,100 @@ const navItems: NavItem[] = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="flex-between px-20 py-4">
-      <div className="flex-between gap-2.5">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+    <nav className="px-6 md:px-10 lg:px-20 py-4 border-b border-neutral-200 relative z-50 bg-white">
+      <div className="flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center gap-2.5">
+          <img src="/logo.svg" />
+          <div className="font-semibold text-neutral-950 text-lg">
+            Job Portal
+          </div>
+        </div>
+
+        {/* Hamburger for Mobile */}
+        <button
+          className="lg:hidden p-0"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label="Toggle menu"
         >
-          <path
-            d="M13.3472 18.468C12.9739 18.468 12.6006 18.328 12.3206 18.048L11.5623 17.2897C11.2239 16.9513 11.2239 16.3913 11.5623 16.053C11.9006 15.7147 12.4606 15.7147 12.7989 16.053L13.3589 16.613L15.2372 14.8863C15.5872 14.5597 16.1472 14.583 16.4739 14.933C16.8006 15.283 16.7772 15.843 16.4272 16.1697L14.3506 18.083C14.0589 18.3397 13.7089 18.468 13.3472 18.468Z"
-            fill="#0D0D0D"
-          />
-          <path
-            d="M18.6672 26.5417H9.33392C3.94392 26.5417 2.94059 24.0334 2.68392 21.5951L1.80892 12.2501C1.68059 11.0251 1.64559 9.21672 2.85892 7.86339C3.90892 6.69672 5.64726 6.13672 8.16726 6.13672H19.8339C22.3656 6.13672 24.1039 6.70838 25.1422 7.86339C26.3556 9.21672 26.3206 11.0251 26.1922 12.2617L25.3172 21.5834C25.0606 24.0334 24.0572 26.5417 18.6672 26.5417ZM8.16726 7.87505C6.19559 7.87505 4.84226 8.26005 4.15392 9.03005C3.58226 9.66005 3.39559 10.6284 3.54726 12.0751L4.42226 21.4201C4.62059 23.2634 5.12226 24.7917 9.33392 24.7917H18.6672C22.8672 24.7917 23.3806 23.2634 23.5789 21.4084L24.4539 12.0867C24.6056 10.6284 24.4189 9.66005 23.8472 9.03005C23.1589 8.26005 21.8056 7.87505 19.8339 7.87505H8.16726Z"
-            fill="#0D0D0D"
-          />
-          <path
-            d="M18.6672 7.87467C18.1889 7.87467 17.7922 7.47801 17.7922 6.99967V6.06634C17.7922 3.98967 17.7922 3.20801 14.9339 3.20801H13.0672C10.2089 3.20801 10.2089 3.98967 10.2089 6.06634V6.99967C10.2089 7.47801 9.81226 7.87467 9.33392 7.87467C8.85559 7.87467 8.45892 7.47801 8.45892 6.99967V6.06634C8.45892 4.01301 8.45892 1.45801 13.0672 1.45801H14.9339C19.5422 1.45801 19.5422 4.01301 19.5422 6.06634V6.99967C19.5422 7.47801 19.1456 7.87467 18.6672 7.87467Z"
-            fill="#0D0D0D"
-          />
-          <path
-            d="M18.6789 16.788C18.2822 16.788 17.9322 16.5197 17.8272 16.123C17.7106 15.6563 17.9906 15.178 18.4572 15.0613C20.7322 14.4897 22.8439 13.498 24.7339 12.1213C25.1189 11.8413 25.6672 11.923 25.9589 12.3197C26.2389 12.7047 26.1572 13.253 25.7606 13.5447C23.6839 15.0497 21.3739 16.1347 18.8772 16.7647C18.8189 16.7763 18.7489 16.788 18.6789 16.788Z"
-            fill="#0D0D0D"
-          />
-          <path
-            d="M9.33418 16.8233C9.26418 16.8233 9.19418 16.8117 9.12418 16.8C6.77918 16.2283 4.57418 15.2367 2.55584 13.86C2.15918 13.5917 2.05418 13.0433 2.32251 12.6467C2.59084 12.25 3.13918 12.145 3.53584 12.4133C5.37918 13.6733 7.38584 14.5717 9.53251 15.0967C9.99918 15.2133 10.2908 15.68 10.1742 16.1583C10.0925 16.555 9.73084 16.8233 9.33418 16.8233Z"
-            fill="#0D0D0D"
-          />
-        </svg>
-        <div className="font-semibold text-neutral-950">Job Portal</div>
+          <svg
+            className="w-6 h-6 text-black"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center flex-1 justify-center gap-6 text-gray-700">
+          <ul className="flex gap-6">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  className="font-semibold hover:text-b5 transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right-side buttons */}
+        <div className="hidden lg:flex gap-6">
+          <Button variant="ghost" className="p-0 text-base">
+            Login
+          </Button>
+          <Button variant="primary" className="px-6 py-2 text-base">
+            Register
+          </Button>
+        </div>
       </div>
-      <ul className="flex gap-6 text-gray">
-        {navItems.map((item) => (
-          <li key={item.label}>
-            <a
-              href={item.href}
-              className="font-semibold hover:text-b5 transition-colors"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <div className="flex gap-9">
-        <Button variant="ghost" className="p-0 text-base">
-          Login
-        </Button>
-        <Button variant="primary" className="px-10 py-2 text-base">
-          Register
-        </Button>
-      </div>
+
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="lg:hidden mt-4 flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 text-gray-700">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  className="font-semibold hover:text-b5 transition-colors block"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-col gap-2 mt-4">
+            <Button variant="ghost" className="text-base w-full">
+              Login
+            </Button>
+            <Button variant="primary" className="text-base w-full">
+              Register
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
