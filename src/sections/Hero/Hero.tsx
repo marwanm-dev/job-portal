@@ -1,9 +1,9 @@
 import Button from "../../components/Button";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <section className="">
-      <div className="bg-[url('/public/wave.svg')] bg-no-repeat bg-cover bg-center">
+      <div className="bg-[url('/wave.svg')] bg-no-repeat bg-cover bg-center">
         <div className="px-6 py-24 text-center">
           <div className="flex flex-col gap-6">
             <h1 className="text-b9.5">

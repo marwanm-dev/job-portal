@@ -1,6 +1,6 @@
 import FeatureCard from "./FeatureCard";
 
-export default function FeaturesSection() {
+export default function Features() {
   return (
     <section className="text-center">
       <div className="flex flex-col gap-16">
