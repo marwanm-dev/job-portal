@@ -2,6 +2,10 @@
 @import "tailwindcss";
 
 @layer base {
+  body {
+    @apply font-inter;
+  }
+
   h1,
   h2,
   h3,
