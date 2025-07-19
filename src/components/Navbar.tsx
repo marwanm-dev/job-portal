@@ -73,8 +73,8 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center flex-1 justify-center gap-6 text-gray-700">
-          <ul className="flex gap-6">
+        <div className="hidden lg:flex xl:text-base text-sm items-center flex-1 justify-center gap-6 text-gray">
+          <ul className="flex gap-8">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
@@ -93,7 +93,7 @@ export default function Navbar() {
           <Button variant="ghost" className="p-0 text-base">
             Login
           </Button>
-          <Button variant="primary" className="px-6 py-2 text-base">
+          <Button variant="primary" className="px-8 py-1 text-base">
             Register
           </Button>
         </div>
@@ -102,7 +102,7 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="lg:hidden mt-4 flex flex-col gap-4">
-          <ul className="flex flex-col gap-4 text-gray-700">
+          <ul className="flex flex-col gap-4 text-gray">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
