@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 
 type NavItem = {
@@ -16,9 +16,24 @@ const navItems: NavItem[] = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNav, setShowNav] = useState<boolean>(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      setShowNav(currentScrollY < lastScrollY || currentScrollY < 10);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <nav className="px-6 md:px-10 lg:px-20 py-4 border-b border-neutral-200 relative z-50 bg-white">
+    <nav
+      className={`w-full fixed px-6 md:px-10 lg:px-20 py-4 bg-white z-50 shadow-[0_2px_8px_rgba(100,150,255,0.1)] transition duration-300 ${showNav ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
+    >
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2.5">
