@@ -11,11 +11,13 @@ export default function Button({
   let variantClasses = "";
 
   if (variant === "primary") {
-    variantClasses = "bg-b5 text-white hover:bg-b5/90";
+    variantClasses =
+      "bg-b5 text-white border border-b5 hover:bg-transparent hover:text-b5 hover:border-b5";
   } else if (variant === "ghost") {
-    variantClasses = "text-b5 hover:text-b5/80 bg-transparent";
+    variantClasses = "bg-transparent text-b5 hover:text-b5/80";
   } else if (variant === "outline") {
-    variantClasses = "border border-b5 text-b5 hover:border-b5/80";
+    variantClasses =
+      "bg-transparent border border-b5 text-b5 hover:bg-b5 hover:text-white hover:border-b5";
   }
 
   return <button className={`${variantClasses} ${className}`} {...props} />;

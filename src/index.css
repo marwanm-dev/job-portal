@@ -20,7 +20,7 @@
     @apply text-xl leading-7;
   }
   button {
-    @apply font-semibold px-[60px] py-3 leading-6 text-xl rounded-full;
+    @apply transition-colors duration-200 font-semibold px-[60px] py-3 leading-6 text-xl rounded-full;
   }
 }
 
