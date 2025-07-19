@@ -10,7 +10,7 @@ export default function FeatureCard({
   description,
 }: FeatureCardProps) {
   return (
-    <div className="text-left bg-feat rounded-[20px] p-6 gap-7 drop-shadow-lg max-w-sm">
+    <div className="text-left bg-feat rounded-[20px] p-6 gap-7 drop-shadow-lg max-w-[320px] sm:max-w-[360px] md:max-w-sm">
       <div className="w-10 h-10 bg-b5 text-white rounded-full flex-center mb-4">
         {icon}
       </div>

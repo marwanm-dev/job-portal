@@ -4,11 +4,13 @@ import Features from "./sections/Features/Features.tsx";
 
 function App() {
   return (
-    <div className="flex flex-col gap-20">
+    <>
       <Navbar />
-      <Hero />
-      <Features />
-    </div>
+      <div className="flex flex-col justify-evenly pt-30 pb-30 gap-30">
+        <Hero />
+        <Features />
+      </div>
+    </>
   );
 }
 

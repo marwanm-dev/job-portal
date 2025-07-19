@@ -13,7 +13,7 @@ export default function Features() {
             approval.
           </p>
         </div>
-        <div className="flex justify-center gap-7 flex-wrap">
+        <div className="flex justify-center gap-6 md:gap-8 flex-wrap">
           <FeatureCard
             icon={
               <svg

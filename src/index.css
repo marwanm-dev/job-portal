@@ -12,16 +12,19 @@
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply font-bold leading-tight;
   }
   h1 {
-    @apply text-7xl leading-[90px];
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
   }
   h2 {
-    @apply text-[52px] leading-16;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-[52px];
   }
   h4 {
-    @apply text-xl leading-7;
+    @apply text-xl;
+  }
+  p {
+    @apply leading-tight;
   }
   button {
     @apply transition-colors duration-200 font-semibold px-[60px] py-3 leading-6 text-xl rounded-full;
@@ -30,10 +33,10 @@
 
 @layer components {
   .p-lg {
-    @apply text-2xl leading-7;
+    @apply text-lg sm:text-xl md:text-2xl;
   }
   .p-sm {
-    @apply text-lg leading-[30px];
+    @apply text-base sm:text-lg;
   }
 }
 
