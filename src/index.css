@@ -20,6 +20,9 @@
   h2 {
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-[52px];
   }
+  h3 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
   h4 {
     @apply text-xl;
   }
@@ -27,7 +30,7 @@
     @apply leading-tight;
   }
   button {
-    @apply transition-colors duration-200 font-semibold px-[60px] py-3 leading-6 text-xl rounded-full;
+    @apply font-semibold px-[60px] py-3 leading-6 text-base md:text-xl rounded-full transition-colors duration-200;
   }
 }
 
@@ -55,9 +58,12 @@
   --color-white: #fff;
 
   --color-gray: #6c757d;
+  --color-gray2: #cccfd1;
   --color-b5: #074a80;
   --color-b8: #031e33;
+  --color-b9: #010f1a;
   --color-b9.5: #01070d;
+  --color-y5: #ee9b26;
   --color-neutral-950: #0d0d0d;
 
   --color-feat: #edf7ff;
