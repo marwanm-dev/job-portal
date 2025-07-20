@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.tsx";
 import Hero from "./sections/Hero/Hero.tsx";
 import Features from "./sections/Features/Features.tsx";
 import Overview from "./sections/Overview/Overview.tsx";
+import Workflow from "./sections/Workflow/Workflow.tsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Hero />
         <Features />
         <Overview />
+        <Workflow />
       </div>
     </>
   );
