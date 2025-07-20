@@ -3,6 +3,7 @@ import Hero from "./sections/Hero/Hero.tsx";
 import Features from "./sections/Features/Features.tsx";
 import Overview from "./sections/Overview/Overview.tsx";
 import Workflow from "./sections/Workflow/Workflow.tsx";
+import WhyUs from "./sections/WhyUs/WhyUs.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Features />
         <Overview />
         <Workflow />
+        <WhyUs />
       </div>
     </>
   );
