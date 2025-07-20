@@ -4,7 +4,7 @@ import LineBreak from "../../components/LineBreak";
 export default function JobRequest() {
   return (
     <section className="bg-b7 relative z-0">
-      <div className="px-6 lg:px-20 py-32 flex flex-col gap-8">
+      <div className="px-6 lg:px-20 py-40 flex flex-col gap-8">
         <h1 className="text-white">
           Looking to Hire Skilled{" "}
           <span className="relative">
