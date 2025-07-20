@@ -1,14 +1,15 @@
+import LineBreak from "../../components/LineBreak";
 import FeatureCard from "./FeatureCard";
 
 export default function Features() {
   return (
     <section className="text-center">
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-16 px-6">
         <div className="flex flex-col gap-4">
           <h2 className="text-b9.5">Why You'll Love this website</h2>
           <p className="p-lg text-b8">
             We make your journey to work abroad simple, fast, and stress-free.
-            <br />
+            <LineBreak />
             Here’s why thousands trust us to guide them from job search to visa
             approval.
           </p>
@@ -39,7 +40,6 @@ export default function Features() {
             title="All-in-One Process"
             description="From submitting your documents to getting your visa approved — we guide you every step of the way in one single platform"
           />
-
           <FeatureCard
             icon={
               <svg
@@ -70,7 +70,6 @@ export default function Features() {
             title="Verified Jobs Only"
             description="No scams, no confusion. We connect you only with trusted companies looking for real workers"
           />
-
           <FeatureCard
             icon={
               <svg
