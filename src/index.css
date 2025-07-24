@@ -37,7 +37,7 @@
   }
   input,
   textarea {
-    @apply w-full px-4 py-4 rounded-md bg-white placeholder-gray outline-0 border-1 border-gray3 focus:border-blue;
+    @apply w-full transition-all outline-none border-1 border-gray3 focus:border-blue;
   }
   label {
     @apply font-bold text-b9.5 mb-2;
@@ -54,12 +54,12 @@
   span.error {
     @apply text-red text-sm mt-2;
   }
+  span.success {
+    @apply text-green text-sm mt-2;
+  }
   input.error,
   textarea.error {
-    @apply text-dark-red bg-dark-red border-red bg-light-red;
-  }
-  .success {
-    @apply text-green text-sm;
+    @apply text-dark-red bg-light-red! border-red!;
   }
 }
 
@@ -83,6 +83,7 @@
   --color-gray: #6c757d;
   --color-gray2: #cccfd1;
   --color-gray3: #d2d5da;
+  --color-gray4: #dddddd;
   --color-cyan: #edf7ff;
   --color-blue: #60a5fa;
   --color-b5: #074a80;

@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import Button from "../../components/Button";
 import toast from "react-hot-toast";
+import Input from "../../components/Input";
 
 const initialState = {
   firstName: "",
@@ -120,7 +121,7 @@ export default function Contact() {
                 <label htmlFor="firstName" className={labelClasses}>
                   First Name
                 </label>
-                <input
+                <Input
                   id="firstName"
                   type="text"
                   placeholder="Your name"
@@ -142,7 +143,7 @@ export default function Contact() {
                 <label htmlFor="lastName" className={labelClasses}>
                   Last Name
                 </label>
-                <input
+                <Input
                   id="lastName"
                   type="text"
                   placeholder="Your last name"
@@ -165,7 +166,7 @@ export default function Contact() {
               <label htmlFor="email" className={labelClasses}>
                 Email Address
               </label>
-              <input
+              <Input
                 id="email"
                 type="email"
                 placeholder="Your email address"
@@ -187,7 +188,8 @@ export default function Contact() {
               <label htmlFor="message" className={labelClasses}>
                 Message
               </label>
-              <textarea
+              <Input
+                isTextarea
                 id="message"
                 placeholder="Your message..."
                 rows={6}
