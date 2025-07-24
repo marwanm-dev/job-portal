@@ -24,6 +24,9 @@
     @apply text-2xl sm:text-3xl md:text-4xl;
   }
   h4 {
+    @apply text-2xl;
+  }
+  h5 {
     @apply text-xl;
   }
   p {
@@ -67,7 +70,7 @@
   --color-y5: #ee9b26;
   --color-neutral-950: #0d0d0d;
 
-  --color-feat: #edf7ff;
+  --color-cyan: #edf7ff;
 
   --font-inter: "Inter", sans-serif;
 }

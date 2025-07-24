@@ -5,6 +5,7 @@ import Overview from "./sections/Overview/Overview.tsx";
 import Workflow from "./sections/Workflow/Workflow.tsx";
 import WhyUs from "./sections/WhyUs/WhyUs.tsx";
 import JobRequest from "./sections/JobRequest/JobRequest.tsx";
+import FAQ from "./sections/FAQ/FAQ.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Workflow />
         <WhyUs />
         <JobRequest />
+        <FAQ />
       </div>
     </>
   );
