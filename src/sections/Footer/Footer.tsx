@@ -57,7 +57,7 @@ export default function Footer() {
 
       {/* Bottom Row */}
       <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-white gap-2">
-        <p>© Copyright SB 2025. Designed by Nada elborhamy</p>
+        <p>© Copyright SB 2025. Developed by Marwan Mostafa</p>
         <div className="flex gap-4">
           <a href="#" className="hover:underline">
             Privacy Policy
