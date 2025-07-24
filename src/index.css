@@ -37,7 +37,7 @@
   }
   input,
   textarea {
-    @apply w-full px-4 py-4 rounded-md bg-white placeholder-gray;
+    @apply w-full px-4 py-4 rounded-md bg-white placeholder-gray outline-0 border-1 border-gray3 focus:border-blue;
   }
   label {
     @apply font-bold text-b9.5 mb-2;
@@ -50,6 +50,16 @@
   }
   .p-sm {
     @apply text-base sm:text-lg;
+  }
+  span.error {
+    @apply text-red text-sm mt-2;
+  }
+  input.error,
+  textarea.error {
+    @apply text-dark-red bg-dark-red border-red bg-light-red;
+  }
+  .success {
+    @apply text-green text-sm;
   }
 }
 
@@ -67,16 +77,24 @@
   --color-black: #000;
   --color-white: #fff;
 
+  --color-disabled: #6d7280;
+  --color-primary-gray: #f9fafb;
   --color-light-gray: #e9edf0;
   --color-gray: #6c757d;
   --color-gray2: #cccfd1;
+  --color-gray3: #d2d5da;
   --color-cyan: #edf7ff;
+  --color-blue: #60a5fa;
   --color-b5: #074a80;
   --color-b7: #042c4d;
   --color-b8: #031e33;
   --color-b9: #010f1a;
   --color-b9.5: #01070d;
   --color-y5: #ee9b26;
+  --color-light-red: #fef2f2;
+  --color-red: #dc2626;
+  --color-dark-red: #991b1b;
+  --color-green: #16a34a;
   --color-neutral-950: #0d0d0d;
 
   --font-inter: "Inter", sans-serif;
