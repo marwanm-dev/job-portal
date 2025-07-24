@@ -35,6 +35,13 @@
   button {
     @apply font-semibold px-[60px] py-3 leading-6 text-base md:text-xl rounded-full transition-colors duration-200;
   }
+  input,
+  textarea {
+    @apply w-full px-4 py-4 rounded-md bg-white placeholder-gray;
+  }
+  label {
+    @apply font-bold text-b9.5 mb-2;
+  }
 }
 
 @layer components {
@@ -60,8 +67,10 @@
   --color-black: #000;
   --color-white: #fff;
 
+  --color-light-gray: #e9edf0;
   --color-gray: #6c757d;
   --color-gray2: #cccfd1;
+  --color-cyan: #edf7ff;
   --color-b5: #074a80;
   --color-b7: #042c4d;
   --color-b8: #031e33;
@@ -69,8 +78,6 @@
   --color-b9.5: #01070d;
   --color-y5: #ee9b26;
   --color-neutral-950: #0d0d0d;
-
-  --color-cyan: #edf7ff;
 
   --font-inter: "Inter", sans-serif;
 }
