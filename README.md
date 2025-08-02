@@ -10,14 +10,14 @@ A fully responsive and functional job portal built from a Figma design during an
 * 🖼️ Designed precisely based on a Figma prototype
 * 🔥 Toast notifications with `react-hot-toast`
 * ⚡️ Fast development with Vite
-* 🌙 TailwindCSS for utility-first styling
+* 🌙 TailwindCSS v4.0 for utility-first styling
 * ✅ Built with modern React (v19) and TypeScript
 * 🧠 Clean component structure and state handling
 
 ## 🛠️ Tech Stack
 
 * **Framework**: React 19 + TypeScript
-* **Styling**: TailwindCSS
+* **Styling**: TailwindCSS v4.0
 * **Build Tool**: Vite
 * **Notifications**: react-hot-toast
 * **Linting**: ESLint + TypeScript ESLint
