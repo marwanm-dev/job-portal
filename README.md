@@ -1,69 +1,84 @@
-# React + TypeScript + Vite
+# Job Portal 💼
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and functional job portal built from a Figma design during an internship. Developed with modern frontend technologies and deployed on Vercel.
 
-Currently, two official plugins are available:
+**🔗 Live Demo:** [job-portal-jet-beta-90.vercel.app](https://job-portal-jet-beta-90.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+* ✅ Fully responsive UI (mobile, tablet, desktop)
+* 🖼️ Designed precisely based on a Figma prototype
+* 🔥 Toast notifications with `react-hot-toast`
+* ⚡️ Fast development with Vite
+* 🌙 TailwindCSS for utility-first styling
+* ✅ Built with modern React (v19) and TypeScript
+* 🧠 Clean component structure and state handling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **Framework**: React 19 + TypeScript
+* **Styling**: TailwindCSS
+* **Build Tool**: Vite
+* **Notifications**: react-hot-toast
+* **Linting**: ESLint + TypeScript ESLint
+* **Deployment**: Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/marwanm-dev/job-portal.git
+cd job-portal
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+### 5. Preview the production build
+
+```bash
+npm run preview
+```
+
+## 📁 Project Structure (Simplified)
+
+```
+src/
+├── components/       # Reusable UI components
+├── sections/         # Page sections
+├── App.tsx           # App root
+├── main.tsx          # Entry point
+└── index.css         # TailwindCSS styles
+```
+
+## 🧪 Linting
+
+To run ESLint checks:
+
+```bash
+npm run lint
+```
+
+## 📸 Screenshots
+
+<img alt="Vite-React-TS" src="https://github.com/user-attachments/assets/6ee7aff3-df1b-4030-b40e-bf31b09837c1" />
+
+---
+
+Made with ❤️ by [@marwanm-dev](https://github.com/marwanm-dev)
